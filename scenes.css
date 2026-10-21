@@ -25,8 +25,8 @@
 .win { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; overflow: hidden; }
 .win-bar { display: flex; align-items: center; gap: .5rem; background: var(--surface-2); border-bottom: 1px solid var(--line); padding: .35rem .6rem; font-size: .8rem; font-weight: 700; color: var(--muted); }
 .win-bar::before { content: ""; width: .55rem; height: .55rem; border-radius: 50%; background: #ff6b6b; box-shadow: .85rem 0 0 #fcc419, 1.7rem 0 0 #51cf66; margin-right: 1.9rem; }
-.win-body { padding: .7rem .8rem; display: grid; gap: .5rem; font-size: .9rem; }
-.url { display: flex; align-items: center; gap: .35rem; flex: 1; background: var(--surface); border: 1px solid var(--line); border-radius: 999px; padding: .2rem .7rem; font: 600 .82rem ui-monospace, Menlo, monospace; color: var(--ink); min-width: 0; overflow: hidden; white-space: nowrap; }
+.win-body { padding: .7rem .8rem; display: grid; grid-template-columns: minmax(0, 1fr); gap: .5rem; font-size: .9rem; }
+.url { display: flex; align-items: center; gap: .35rem; flex: 1; background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: .2rem .7rem; font: 600 .82rem ui-monospace, Menlo, monospace; color: var(--ink); min-width: 0; word-break: break-all; line-height: 1.35; }
 .url .ic { width: .95rem; height: .95rem; }
 .url.safe .ic { color: var(--good); }
 .url.risky .ic { color: var(--bad); }
@@ -90,8 +90,8 @@ button.sto-it:hover { border-color: var(--scene); }
 .dp-p:hover { border-color: var(--scene); }
 .dp-p.right { border-color: var(--good); background: color-mix(in srgb, var(--good) 14%, var(--surface)); }
 .dp-p.wrong { border-color: var(--bad); background: color-mix(in srgb, var(--bad) 12%, var(--surface)); }
-.dp-rights { display: grid; gap: .35rem; }
-.dp-r { justify-content: flex-start; text-align: left; }
+.dp-rights { display: grid; grid-template-columns: minmax(0, 1fr); gap: .35rem; }
+.dp-r { display: block; text-align: left; }
 .dp-dl { display: grid; grid-template-columns: auto 1fr; gap: .3rem .7rem; margin: 0 0 .6rem; font-size: .88rem; }
 .dp-dl dt { font-weight: 700; color: var(--muted); }
 .dp-dl dd { margin: 0; }
