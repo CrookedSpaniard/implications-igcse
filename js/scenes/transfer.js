@@ -14,27 +14,27 @@ FD.add({
   mount(el) {
     // Destinations: [key, label, point, inEEA]
     const D = {
-      ie: { n: 'a data centre in the Republic of Ireland', p: [365, 120], eea: true },
-      us: { n: 'a data centre in the USA', p: [110, 150], eea: false },
-      x: { n: 'a data centre in Country X (no data protection laws)', p: [530, 160], eea: false, nolaw: true },
+      ie: { n: 'a data centre in the Republic of Ireland', p: [380, 112], eea: true },
+      us: { n: 'a data centre in the USA', p: [100, 150], eea: false },
+      x: { n: 'a data centre in Country X (no data protection laws)', p: [535, 160], eea: false, nolaw: true },
     };
-    const HOME = [300, 172];
+    const HOME = [290, 172];
     el.innerHTML = `
       <div class="sim tr-s">
         <div class="sim-box">
           <svg viewBox="0 0 600 280" class="tr-map" role="img" aria-label="Personal data sent from Spain to Ireland, the USA or Country X">
-            <rect class="tr-us" x="20" y="60" width="190" height="170" rx="26"/>
-            <text class="svg-lbl" x="115" y="88">🇺🇸 United States</text>
-            <rect class="tr-eea" x="240" y="40" width="210" height="210" rx="26"/>
-            <text class="svg-lbl" x="345" y="66">🇪🇺 European Economic Area</text>
-            <text class="svg-sm tr-note" x="345" y="238" style="text-anchor:middle">EU countries + Norway, Iceland…</text>
-            <rect class="tr-x" x="480" y="80" width="105" height="150" rx="26"/>
-            <text class="svg-lbl" x="532" y="106">🏳️ Country X</text>
+            <rect class="tr-us" x="15" y="60" width="170" height="170" rx="26"/>
+            <text class="svg-lbl" x="100" y="88">🇺🇸 United States</text>
+            <rect class="tr-eea" x="205" y="40" width="260" height="215" rx="26"/>
+            <text class="svg-lbl" x="335" y="66">🇪🇺 European Economic Area</text>
+            <text class="svg-sm tr-note" x="335" y="242" style="text-anchor:middle">EU countries + Norway, Iceland…</text>
+            <rect class="tr-x" x="480" y="80" width="112" height="150" rx="26"/>
+            <text class="svg-lbl" x="536" y="106">Country X</text>
             <text class="emo" x="${HOME[0]}" y="${HOME[1]}" font-size="30">📱</text><text class="svg-sm" x="${HOME[0]}" y="${HOME[1] + 30}" style="text-anchor:middle">🇪🇸 You, in Spain</text>
-            <text class="emo" x="365" y="120" font-size="30">🗄️</text><text class="svg-sm" x="365" y="152" style="text-anchor:middle">🇮🇪 Ireland</text>
-            <text class="emo" x="110" y="150" font-size="30">🗄️</text>
-            <text class="emo" x="530" y="160" font-size="30">🗄️</text>
-            <path class="tr-bridge" id="bridge" d="M240 150 H210"/>
+            <text class="emo" x="380" y="112" font-size="30">🗄️</text><text class="svg-sm" x="380" y="144" style="text-anchor:middle">🇮🇪 Ireland</text>
+            <text class="emo" x="100" y="150" font-size="30">🗄️</text>
+            <text class="emo" x="535" y="160" font-size="30">🗄️</text>
+            <path class="tr-bridge" id="bridge" d="M205 150 H185"/>
             <g id="pkt" class="tr-pkt" opacity="0"><rect x="-22" y="-13" width="44" height="26" rx="6"/><text class="emo" x="0" y="1" font-size="15">👤</text></g>
             <text class="emo tr-badge" id="badge" x="0" y="0" font-size="26" opacity="0"></text>
           </svg>
